@@ -1,9 +1,15 @@
 SENTENCE_START: str = "Panaversity is fun. I learned to program and used Python to make my "
+
+bold_start = '\033[1m'
+bold_end = '\033[0m'
+italic_start = '\033[3m'
+italic_end = '\033[0m'
+
 def main():
     # Get the three inputs from the user
-    adjective: str = input("\033[1m\033[3m Please type an adjective and press enter. \033[0m")
-    noun: str = input("\033[1m\033[3m Please type a noun and press enter. \033[0m")
-    verb: str = input("\033[1m\033[3m Please type a verb and press enter. \033[0m")
+    adjective: str = input(f"{bold_start}{italic_start}Please type an adjective and press enter.{italic_end}{bold_end}")
+    noun: str = input(f"{bold_start}{italic_start}Please type a noun and press enter.{italic_end}{bold_end}")
+    verb: str = input(f"{bold_start}{italic_start}Please type a verb and press enter.{italic_end}{bold_end}")
 
     print(f'{SENTENCE_START} {adjective} {noun} {verb}!')
 

@@ -1,2 +1,6 @@
 bold_start = '\033[1m'
 bold_end = '\033[0m'
+italic_start = '\033[3m'
+italic_end = '\033[0m'
+blue_start = '\033[34m'
+blue_end = '\033[0m'
