@@ -10,7 +10,7 @@ def login(email, stored_logins, password_to_check):
     password_to_check: a password we want to test alongside the email to login with
     """
     #  `==` returns True if both values are equal, and False if they are not.
-    # so instead of writing an if condition to return True or False, you can return the comparison itself.
+    # so instead of writing an if condition to return True or False, we can return the comparison itself.
     return stored_logins[email] == hash_password(password_to_check)
 
 
