@@ -1,3 +1,9 @@
+blue_start = '\033[34m'
+blue_end = '\033[0m'
+red_start = '\033[91m'
+red_end = '\033[0m'
+
+
 import random
 def main():
     guess_count = 0
@@ -6,9 +12,9 @@ def main():
 
     while True:
         try:
-            guess = int(input("Enter a guess"))
+            guess = int(input(f"{blue_start}Enter a guess{blue_end}"))
         except ValueError:
-            print("Invalid input. Enter a number.")
+            print(f"{red_start}Invalid input. Enter a number.{red_end}")
             continue
 
         guess_count += 1
