@@ -1,8 +1,8 @@
 MAX_LENGTH : int = 3
 
 def shorten(lst):
-    while len(lst) > MAX_LENGTH:
-        print(lst.pop())
+    while len(lst) > MAX_LENGTH: #only starting 3 elements remains 
+        print(lst.pop()) # and rest of them pop and later they `ll print
 # There is no need to edit code beyond this point
 
 def get_lst():
