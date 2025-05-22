@@ -1,14 +1,14 @@
 import random
 
 choices = {"r": "rock", "p": "paper", "s": "scissors"}
-user = input("Choose rock = r, paper = p, or scissors = s: ").lower()
+user = input("Choose rock = r , paper = p 📃, or scissors = s ✂: ").lower()
 
 if user not in choices:
-    print("Invalid choice. Please Choose rock = r, paper = p, or scissors = s:.")
+    print("Invalid choice. Please Choose rock = r , paper = p 📃, or scissors = s ✂:.")
 else:
     computer = random.choice(list(choices.values()))
     user_choice = choices[user]
-    print(f"You: {user_choice} | Computer: {computer}")
+    print(f"You: {user_choice} vs Computer: {computer}")
 
     if user_choice == computer:
         print("It's a tie!")
@@ -18,3 +18,4 @@ else:
         print("You win!🎉")
     else:
         print("You lose!😢")
+ 
