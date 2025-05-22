@@ -3,6 +3,7 @@ blue_end = '\033[0m'
 red_start = '\033[91m'
 red_end = '\033[0m'
 cyan_start = '\033[96m'
+cyan_end = '\033[0m'
 green_start = '\033[92m'
 green_end = '\033[0m'
 
@@ -13,13 +14,13 @@ def main():
     print(f"{cyan_start}{'⋰⋱' * 70}")
     print(f" \t \t \t \t Welcome to the Guess the Number Game!")
     print('⋱⋰' * 70)
-    print(" \t \t  Think of a number between 1 and 99, and I will try to guess it! \n \n")
+    print(f"\t \t  Think of a number between 1 and 99, and I will try to guess it! \n \n {cyan_end}")
 
     while True:
         guess = (low + high) // 2
         guess_count += 1
         response = input(
-            f"{blue_start}Is your number {guess}? (h = too high, l = too low, c = correct){blue_end} ").lower()
+            f"Is your number {guess}? (h = too high, l = too low, c = correct)").lower()
 
         if response == 'c':
             print(f"{green_start} \t \t  Yay! I guessed it in {guess_count} tries.{green_end}")
