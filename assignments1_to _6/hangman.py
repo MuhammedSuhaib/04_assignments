@@ -2,14 +2,17 @@ import random
 import string
 
 # list of words
-words = ['python', 'javascript', 'typescript', 'html', 'css']
-word = random.choice(words)
-guessed = []
-lives = 6
+words: list[str] = ['python', 'javascript', 'typescript', 'html', 'css']
+word: str = random.choice(words)
+guessed: list[str] = []
+lives: int = 6
+
+print('Welcome to Hangman!')
+print('Available words:', words)
 
 # game loop
 while lives > 0:
-    display = []
+    display: list[str] = []
     for letter in word:
         if letter in guessed:
             display.append(letter)
@@ -18,7 +21,7 @@ while lives > 0:
     print('Word:', ' '.join(display))
     print('Lives:', lives)
 
-    guess = input('Guess a letter: ').lower()
+    guess: str = input('Guess a letter: ').lower()
 
     if guess in string.ascii_lowercase and guess not in guessed:
         guessed.append(guess)

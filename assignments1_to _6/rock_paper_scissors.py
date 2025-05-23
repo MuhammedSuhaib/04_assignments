@@ -1,13 +1,13 @@
 import random
 
-choices = {"r": "rock", "p": "paper", "s": "scissors"}
-user = input("Choose rock = r , paper = p 📃, or scissors = s ✂: ").lower()
+choices: dict[str, str] = {"r": "rock", "p": "paper", "s": "scissors"}
+user: str = input("Choose rock = r , paper = p 📃, or scissors = s ✂: ").lower()
 
 if user not in choices:
     print("Invalid choice. Please Choose rock = r , paper = p 📃, or scissors = s ✂:.")
 else:
-    computer = random.choice(list(choices.values()))
-    user_choice = choices[user]
+    computer: str = random.choice(list(choices.values()))
+    user_choice: str = choices[user]
     print(f"You: {user_choice} vs Computer: {computer}")
 
     if user_choice == computer:

@@ -17,7 +17,7 @@ def main():
     print(f"\t \t  Think of a number between 1 and 99, and I will try to guess it! \n \n {cyan_end}")
 
     while True:
-        guess = (low + high) // 2
+        guess : int = (low + high) // 2
         guess_count += 1
         response = input(
             f"Is your number {guess}? (h = too high, l = too low, c = correct)").lower()
