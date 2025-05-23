@@ -13,9 +13,8 @@ else:
     if user_choice == computer:
         print("It's a tie!")
     elif (user_choice == "rock" and computer == "scissors") or \
-         (user_choice == "paper" and computer == "rock") or \
-         (user_choice == "scissors" and computer == "paper"):
+        (user_choice == "paper" and computer == "rock") or \
+        (user_choice == "scissors" and computer == "paper"):
         print("You win!🎉")
     else:
         print("You lose!😢")
- 
